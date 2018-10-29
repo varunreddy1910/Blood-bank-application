@@ -1,0 +1,61 @@
+<?php
+$action = $_GET["action"];
+$myText = $_POST["mytext"];
+
+if($action = "save") {
+  $targetFolder = "C:\Users\griet\Desktop\Blood Bank";
+  file_put_contents($targetFolder."mytext.txt", $myText);
+}
+?>   
+<html>
+<head>
+<title>Donar registration form</title>
+</head>
+
+<h2 ALIGN="CENTER">Registration form</h2>
+
+<form action="Donar.html" method="post">
+<table border="0" align="center">
+<tbody>
+
+
+<tr>
+<td><label for="name">Name: </label></td>
+<td><input id="name" maxlength="50" name="name" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="age">Age: </label></td>
+<td><input id="age" maxlength="50" name="age" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="address">Address: </label></td>
+<td><input id="address" maxlength="50" name="address" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="mobile">Mobile: </label></td>
+<td><input id="mobile" maxlength="10" name="rollno" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="email">Email_Address:</label></td>
+<td><input id="email" maxlength="50" name="email" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="blood_group">Blood_group:</label></td>
+<td><input id="blood_group" maxlength="50" name="blood_group" type="text" /></td>
+</tr>
+
+
+
+<tr>
+<td align="right"><input name="Submit" type="Submit" value="Submit" /></td>
+</tr>
+
+</tbody>
+</table>
+</form>
+</html>
